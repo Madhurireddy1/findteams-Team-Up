@@ -10,7 +10,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # DEBUG = True
 
 # In Production
-SECRET_KEY = 'enter_your_secret_key'
+SECRET_KEY = '$4l3)+=#^kdtkan#5nwprpi&)q1&pydrj1o0fn)gilwbj9x+5e'
 # we can use os.environ.get istead of config but haven't tested it.
 DEBUG = True
 
@@ -65,19 +65,19 @@ WSGI_APPLICATION = 'Team_Up.wsgi.application'
 # Database for DEV
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-#DATABASES = {
- #   'default': {
-  #      'ENGINE': 'django.db.backends.sqlite3',
-   #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    #}
-#}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
 # Database In Production
- DATABASES = {
-   'default': dj_database_url.config(
-      default=os.environ.get('DATABASE_URL')
- )
- }
+# DATABASES = {
+#   'default': dj_database_url.config(
+#      default=os.environ.get('DATABASE_URL')
+# )
+# }
 
 WHITENOISE_USE_FINDERS = True
 
